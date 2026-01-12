@@ -66,3 +66,5 @@ GUI/build
 
 docs/reStructuredText/_build/
 tools/odrive-cansimple.ini
+_image_built
+Firmware/build.sh

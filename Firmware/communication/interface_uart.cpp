@@ -189,7 +189,7 @@ void start_uart_server(UART_HandleTypeDef* huart) {
     dma_last_rcv_idx = 0;
 
     // Start UART communication thread
-    osThreadDef(uart_server_thread_def, uart_server_thread, osPriorityNormal, 0, stack_size_uart_thread / sizeof(StackType_t) /* the ascii protocol needs considerable stack space */);
+    osThreadDef(uart_server_thread_def, uart_server_thread, osPriorityRealtime, 0, stack_size_uart_thread / sizeof(StackType_t) /* the ascii protocol needs considerable stack space */);
     uart_thread = osThreadCreate(osThread(uart_server_thread_def), NULL);
 }
 

@@ -125,7 +125,7 @@ std::array<Axis, AXIS_COUNT> axes{{
         0, // axis_num
         1, // step_gpio_pin
         2, // dir_gpio_pin
-        (osPriority)(osPriorityHigh + (osPriority)1), // thread_priority
+        osPriorityHigh, // thread_priority
         encoders[0], // encoder
         sensorless_estimators[0], // sensorless_estimator
         controllers[0], // controller
